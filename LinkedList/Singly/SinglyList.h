@@ -35,6 +35,7 @@ Node *GetNode(int x); //vi du su dung node luu 1 gia tri duy nhat, luu y dau *, 
 bool IsEmpty(List l); //kiem tra list co trong hay khong
 void AddHead(List &l, Node *p); //them 1 node vao dau
 //y tuong: node moi dua len dau se tro next vao node dau roi bien node vua them thanh node dau
+void AddTail(List &l, Node *p);
 
 //nhap xuat
 void Input(List &l); //nhap danh sach

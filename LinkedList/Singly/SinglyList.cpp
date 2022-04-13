@@ -28,6 +28,15 @@ void AddHead(List &l, Node *p){ //tham khao hinh: https://media.geeksforgeeks.or
     }
 }
 
+void AddTail(List &l, Node *p){
+    if (l.pHead == NULL)
+        l.pHead = l.pTail = p;
+    else{
+        l.pTail->pNext = p;
+        l.pTail = p;
+    }
+}
+
 void Input(List &l){
     Init(l);
     cout << "Number: ";
@@ -35,7 +44,7 @@ void Input(List &l){
     for (int i=0; i<n; i++){
         cout << "Value: "; cin >> x;
         Node *p = GetNode(x);
-        AddHead(l, p);
+        AddTail(l, p);
     }
 }
 
