@@ -37,6 +37,9 @@ void AddHead(List &l, Node *p); //them 1 node vao dau
 //y tuong: node moi dua len dau se tro next vao node dau roi bien node vua them thanh node dau
 void AddTail(List &l, Node *p);
 
+void RemoveHead(List &l);//xoa node dau
+void RemoveTail(List &l);//xoa node cuoi
+
 //nhap xuat
 void Input(List &l); //nhap danh sach
 void Output(List &l); //in danh sach

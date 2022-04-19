@@ -37,6 +37,27 @@ void AddTail(List &l, Node *p){
     }
 }
 
+void RemoveHead(List &l){
+    if (l.pHead != NULL){
+        Node *p = l.pHead->pNext;
+        delete l.pHead;
+        l.pHead = p;
+    }
+}
+
+void RemoveTail(List &l){
+    if (l.pHead != NULL){
+        Node *p = l.pHead;
+        while (p->pNext->pNext != NULL){
+            p = p->pNext;
+        }
+        delete l.pTail;
+        l.pTail = p;
+        l.pTail->pNext = NULL;
+    }
+}
+
+
 void Input(List &l){
     Init(l);
     cout << "Number: ";
